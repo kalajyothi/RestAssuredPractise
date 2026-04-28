@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Restful ECommerce Test Suite">
+    <test name="Restful ECommerce partial update order tests">
+        <classes>
+            <class name="restfulecommerce.tutorial.TestPatchRequestExamples">
+                <methods>
+                    <include name="testTokenGeneration"/>
+                    <include name="testPartialUpdateOrder"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
