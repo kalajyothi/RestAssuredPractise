@@ -38,4 +38,18 @@ public class PostExampleTest {
                 .assertThat()
                 .body("message", equalTo("Orders added successfully!"));
     }
+
+    @Test
+    public void testGetAllOrders() {
+
+        given().when()
+                .log()
+                .all()
+                .get("http://localhost:3004/getAllOrders")
+                .then()
+                .log()
+                .all()
+                .statusCode(200);
+
+    }
 }
