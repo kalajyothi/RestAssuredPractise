@@ -1,4 +1,4 @@
-package restfulecommerce.tutorial;
+package gittutorial;
 
 import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
@@ -6,8 +6,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.core.IsEqual.equalTo;
 
-public class TestPostRequestWithHardCodedBody {
-
+public class PostExampleTest {
 
     @Test
     public void testCreateOrder() {
@@ -38,5 +37,19 @@ public class TestPostRequestWithHardCodedBody {
                 .and()
                 .assertThat()
                 .body("message", equalTo("Orders added successfully!"));
+    }
+
+    @Test
+    public void testGetAllOrders() {
+
+        given().when()
+                .log()
+                .all()
+                .get("http://localhost:3004/getAllOrders")
+                .then()
+                .log()
+                .all()
+                .statusCode(200);
+
     }
 }
