@@ -1,4 +1,4 @@
-package restfulecommerce.tutorial;
+package gittutorial;
 
 import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
@@ -6,8 +6,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.core.IsEqual.equalTo;
 
-public class TestPostRequestWithHardCodedBody {
-
+public class PostExampleTest {
 
     @Test
     public void testCreateOrder() {
